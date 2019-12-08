@@ -81,3 +81,13 @@ box-sizing: border-box;
 margin-top: 2%;
 margin-bottom: 4%;
 }
+
+.profile {
+background: green;
+width: 35px;
+height: 35px;
+text-align: center;
+font-weight: bold;
+color: white;
+border-radius: 100%;
+}
