@@ -60,6 +60,7 @@ a,a:hover {
 
 input {
   width: 35%;
+  margin-top: 3%;
 }
 
 input:focus {
@@ -68,4 +69,15 @@ input:focus {
 
 label {
   color: grey;
+  position: absolute;
+  text-align: center;
+  margin-left: 12%;
+}
+
+.loginbox {
+text-align: center;
+margin: 0px;
+box-sizing: border-box;
+margin-top: 2%;
+margin-bottom: 4%;
 }
