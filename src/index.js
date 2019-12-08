@@ -4,10 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 // import App from './App';
 // import Login from './view/Login';
-import Home from './view/Home';
+// import Home from './view/Home';
+import Category from './view/Category';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Home />, document.getElementById('Home'));
+ReactDOM.render(<Category />, document.getElementById('Home'));
 // ReactDOM.render(<Login />, document.getElementById('root'));
 // ReactDOM.render(<App />, document.getElementById('login'));
 
