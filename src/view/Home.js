@@ -12,16 +12,16 @@ import '../App.css';
 function Home () {
 return (
 <Container>
-<Navbar bg="light" expand="lg">
+<Navbar expand="lg">
   <Navbar.Brand href="#home" style={{fontWeight:"bold",fontSize:"30px"}}>Medium</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
 
     </Nav>
+    <h4 style={{marginTop:"5px",marginRight:"20px"}}><span role="img" aria-label="lonceng">&#127859;</span></h4>
+    <h3 style={{marginTop:"5px",marginRight:"20px"}}><span role="img" aria-label="lup">&#128365;</span></h3>
     <Form inline>
-      <Button variant="outline-dark btn-sm">Upgrade</Button>
-      &nbsp;&nbsp;&nbsp;
       <div className="profile">R</div>
     </Form>
   </Navbar.Collapse>
@@ -29,7 +29,7 @@ return (
 
 <table cellPadding="12">
     <tr>
-        <td></td>
+        <td>&lt;</td>
         <td>HOME</td>
         <td>ONEZERO</td>
         <td>ELEMENTAL</td>
@@ -42,7 +42,7 @@ return (
         <td>HEATED</td>
         <td>MODUS</td>
         <td>MORE</td>
-        <td></td>
+        <td>&gt;</td>
     </tr>
 </table>
 
@@ -93,11 +93,11 @@ return (
     <p style={{fontSize:"13px",marginTop:"-14px",color:"gray"}}>Sep 30 . 3mins read</p>
     </Col>
 </Row>
-<a href="!#" style={{marginLeft:"85%"}}> SEE ALL FEATURED</a>
+<a href="!#" style={{marginLeft:"85%"}}> SEE ALL FEATURED &gt;</a>
 <hr></hr>
-<br></br>
-<p style={{fontSize:"20px",position:"absolute",marginLeft:"60%"}}><b>Popular On Medium<hr></hr></b></p>
 <Row>
+    <Col md={10}>
+    <Row>
     <Col lg={6}>
         <p>BASED ON YOUR READING HISTORY</p>
         <p style={{fontSize:"18px"}}><b>React Authentication With Twitter, Google, Facebook and Github</b></p>
@@ -113,7 +113,6 @@ return (
         
     </Col>
 </Row>
-
 <Row>
     <Col lg={6}>
         <p>BASED ON YOUR READING HISTORY</p>
@@ -174,8 +173,72 @@ return (
     <Col>
     <img src={art} alt="art"></img>
     </Col>
+</Row>
+    </Col>
     <Col>
-        
+    <div style={{position:"absolute",marginLeft:"-30%"}}>
+        <h4><b>Popular On medium</b></h4><hr></hr>
+    <Row>
+        <Col>
+        <Row>
+            <Col>
+            <p style={{color:"grey",fontSize:"30px"}}>01</p>
+            </Col>
+            <Col>
+            <p style={{marginLeft:"-90%",marginTop:"6%"}}><b>A Nude ‘Playboy’ Photo Has Been a Mainstay in Testing Tech for Decades</b></p>
+            <p style={{fontSize:"13px",marginLeft:"-90%",marginTop:"-10%"}}>Corinne Purtill in OneZero</p>
+            <p style={{fontSize:"12px",marginLeft:"-90%",marginTop:"-10%"}}>Nov 26 . 6 min read</p>
+            </Col>
+        </Row>
+        <Row>
+            <Col>
+            <p style={{color:"grey",fontSize:"30px"}}>02</p>
+            </Col>
+            <Col>
+            <p style={{marginLeft:"-90%",marginTop:"6%"}}><b>A Nude ‘Playboy’ Photo Has Been a Mainstay in Testing Tech for Decades</b></p>
+            <p style={{fontSize:"13px",marginLeft:"-90%",marginTop:"-10%"}}>Corinne Purtill in OneZero</p>
+            <p style={{fontSize:"12px",marginLeft:"-90%",marginTop:"-10%"}}>Nov 26 . 6 min read</p>
+            </Col>
+        </Row>
+        <Row>
+            <Col>
+            <p style={{color:"grey",fontSize:"30px"}}>03</p>
+            </Col>
+            <Col>
+            <p style={{marginLeft:"-90%",marginTop:"6%"}}><b>A Nude ‘Playboy’ Photo Has Been a Mainstay in Testing Tech for Decades</b></p>
+            <p style={{fontSize:"13px",marginLeft:"-90%",marginTop:"-10%"}}>Corinne Purtill in OneZero</p>
+            <p style={{fontSize:"12px",marginLeft:"-90%",marginTop:"-10%"}}>Nov 26 . 6 min read</p>
+            </Col>
+        </Row>
+        <Row>
+            <Col>
+            <p style={{color:"grey",fontSize:"30px"}}>04</p>
+            </Col>
+            <Col>
+            <p style={{marginLeft:"-90%",marginTop:"6%"}}><b>A Nude ‘Playboy’ Photo Has Been a Mainstay in Testing Tech for Decades</b></p>
+            <p style={{fontSize:"13px",marginLeft:"-90%",marginTop:"-10%"}}>Corinne Purtill in OneZero</p>
+            <p style={{fontSize:"12px",marginLeft:"-90%",marginTop:"-10%"}}>Nov 26 . 6 min read</p>
+            </Col>
+        </Row>
+        <Row>
+            <Col><hr></hr></Col>
+        </Row>
+        <Row>
+            <Col lg={2}><p style={{fontSize:"13px"}}>Help</p></Col>
+            <Col lg={2}><p style={{fontSize:"13px"}}>Status</p></Col>
+            <Col lg={2}><p style={{fontSize:"13px"}}>Writers</p></Col>
+            <Col lg={2}><p style={{fontSize:"13px"}}>Blog</p></Col>
+            <Col><p style={{fontSize:"13px"}}>Careers</p></Col>
+        </Row>
+        <Row>
+            <Col lg={2}><p style={{fontSize:"13px"}}>Privacy</p></Col>
+            <Col lg={2}><p style={{fontSize:"13px"}}>Terms</p></Col>
+            <Col lg={2}><p style={{fontSize:"13px"}}>About</p></Col>
+        </Row>
+        </Col>
+    </Row>
+
+    </div>
     </Col>
 </Row>
 
