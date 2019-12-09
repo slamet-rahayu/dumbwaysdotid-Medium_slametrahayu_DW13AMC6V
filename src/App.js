@@ -60,8 +60,8 @@ function App() {
 
   return (
     <ButtonToolbar>
-      <Button className="btn btn-sm btn-success" onClick={() => setModalShow(true)} style={{marginLeft:"80%"}}>
-        Get started
+      <Button className="btn btn-sm btn-success" onClick={() => setModalShow(true)} style={{marginLeft:"46%"}}>
+        Register
       </Button>
 
       <MyVerticallyCenteredModal

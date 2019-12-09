@@ -3,6 +3,9 @@ import { Button } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
 import { ButtonToolbar } from 'react-bootstrap';
 import '../App.css';
+import '../App';
+import {Route, BrowserRouter} from 'react-router-dom';
+import Apps from '../App';
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -34,7 +37,9 @@ function MyVerticallyCenteredModal(props) {
             <label>Your password</label>
             <input type="password" placeholder="&#128712;" style={{border:"none",borderBottom:"1px solid grey"}}></input><br></br><br></br><br></br>
             <button className="btn btn-dark">Continue</button><br></br><br></br><br></br>
-            <a href="!#"> All sign in options</a>
+            <BrowserRouter>
+            <Apps />
+            </BrowserRouter>
           </form>
         </center>
         </div>

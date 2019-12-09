@@ -81,3 +81,8 @@ box-sizing: border-box;
 margin-top: 2%;
 margin-bottom: 4%;
 }
+
+.register,register:hover {
+  background: none;
+  color: green;
+}
