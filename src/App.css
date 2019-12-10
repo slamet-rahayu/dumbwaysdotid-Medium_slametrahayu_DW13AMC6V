@@ -80,4 +80,33 @@ margin: 0px;
 box-sizing: border-box;
 margin-top: 2%;
 margin-bottom: 4%;
+<<<<<<< HEAD
+}
+
+.profile {
+background: green;
+width: 35px;
+height: 35px;
+text-align: center;
+color: white;
+border-radius: 100%;
+}
+
+td:hover {
+  color: grey;
+}
+
+.box1 {
+background: yellow;
+margin-left: -2%;
+margin-right: -1%
+}
+
+.text {
+  text-align: left;
+  margin: 0% 20%;
+  padding-top:20px ;
+  padding-bottom: 2px;
+=======
+>>>>>>> 433b4e33bdc0c78c5855969d840aa3c008bb69d5
 }
