@@ -55,7 +55,7 @@ return (
 </Row>
 <br></br>
 <Row>
-    <Col style={{background:"purple"}}>
+    <Col style={{background:"purple",width:"100px"}}>
     <img src={One} alt="one" style={{marginLeft:"-2%",float:"left"}}></img>
     <div>
         <p style={{color:"white",fontSize:"30px",textAlign:"center",marginTop:"5%"}}>The Forgotten Pixel Art Masterpieces of the PlayStation 1 Era</p>
@@ -67,7 +67,7 @@ return (
 </Row>
 <br></br><br></br>
 <Row>
-    <Col style={{background:"purple"}}>
+    <Col style={{background:"purple",marginLeft:"-0.7%"}}>
     <img src={One} alt="one" style={{marginRight:"-2%",float:"right"}}></img>
     <div>
         <p style={{color:"white",fontSize:"30px",textAlign:"center",marginTop:"5%"}}>The Forgotten Pixel Art Masterpieces of the PlayStation 1 Era</p>
@@ -78,18 +78,7 @@ return (
     </Col>
 </Row>
 <br></br><br></br>
-<Row>
-    <Col style={{background:"purple"}}>
-    <img src={One} alt="one" style={{marginLeft:"-2%",float:"left"}}></img>
-    <div>
-        <p style={{color:"white",fontSize:"30px",textAlign:"center",marginTop:"5%"}}>The Forgotten Pixel Art Masterpieces of the PlayStation 1 Era</p>
-        <p style={{color:"white",textAlign:"center",fontSize:"18px",marginTop:"-1%"}}>Video games simply can't made like this anymore</p>
-        <p style={{color:"yellow",textAlign:"center"}}>Richmond Lee</p>
-        <p style={{textAlign:"center",fontWeight:"bold",color:"white",marginTop:"-2%"}}>Dec 7 . 9 mins read</p>
-    </div>
-    </Col>
-</Row>
-<br></br><br></br>
+
 <Row>
     <Col>
     <div className="box1">
@@ -105,7 +94,9 @@ return (
 <br></br><br></br>
 <Row>
     <Col>
+    <div style={{marginLeft:"-2%",marginRight:"-1%"}}>
     <img src={Pixel} alt="pixel" style={{width:"100%"}}></img>
+    </div>
     </Col>
 </Row>
 <br></br><br></br>
@@ -123,7 +114,9 @@ return (
 <br></br><br></br>
 <Row>
     <Col>
+    <div style={{marginLeft:"-2%",marginRight:"-1%"}}>
     <img src={Pixel} alt="pixel" style={{width:"100%"}}></img>
+    </div>
     </Col>
 </Row>
 <Row>
