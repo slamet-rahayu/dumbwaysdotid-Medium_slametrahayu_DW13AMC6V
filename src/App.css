@@ -87,11 +87,16 @@ background: green;
 width: 35px;
 height: 35px;
 text-align: center;
-font-weight: bold;
 color: white;
 border-radius: 100%;
 }
 
 td:hover {
   color: grey;
+}
+
+.box1 {
+width: 100%;
+height: 100%;
+background: yellow;
 }
