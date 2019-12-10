@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Button } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
 import { ButtonToolbar } from 'react-bootstrap';
@@ -31,16 +31,10 @@ function MyVerticallyCenteredModal(props) {
         <p style={{fontSize:"15px",color:"grey",textAlign:"center"}}>Enter the email address associated with your account,<br></br> and we’ll send a magic link to your inbox.
         </p><br></br><br></br>
         <center>
-          <form>
-            <label>Your email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="email" placeholder="&#128712;" style={{border:"none",borderBottom:"1px solid grey"}}></input><br></br><br></br>
-            <label>Your password</label>
-            <input type="password" placeholder="&#128712;" style={{border:"none",borderBottom:"1px solid grey"}}></input><br></br><br></br><br></br>
-            <button className="btn btn-dark">Continue</button><br></br><br></br><br></br>
+            <Form />
             <BrowserRouter>
             <Apps />
             </BrowserRouter>
-          </form>
         </center>
         </div>
       </Modal.Body>
@@ -68,6 +62,77 @@ function App() {
   );
 }
 
+class Form extends Component {
+  userData;
+  constructor(props) {
+    super(props);
+
+    this.onChangeEmail = this.onChangeEmail.bind(this);
+    this.onChangePassword = this.onChangePassword.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+
+    this.state = {
+      email: '',
+      password: ''
+    }
+  }
+
+  
+onChangeEmail(e) {
+  this.setState({ email: e.target.value })
+}
+
+onChangePassword(e) {
+  this.setState({ password: e.target.vlaue })
+}
+
+onSubmit(e) {
+  e.preventDefault()
+
+  this.setState({
+    email:'',
+    password:''
+
+  })
+}
+
+componentDidMount() {
+  this.userData = JSON.parse(localStorage.getItem('user'));
+
+  if(localStorage.getItem('user')) {
+    this.setState({
+      email: this.userData.email,
+      password: this.userData.password
+    })
+  } else {
+    this.setState({
+      email:'',
+      password: ''
+    })
+  }
+}
+
+componentWillUpdate(nextProps, nextState) {
+  localStorage.setItem('user',JSON.stringify(nextState));
+}
+
+render () {
+  return (
+    <div>
+      <form onSubmit={this.onSubmit}>
+            <label>Your email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="email" placeholder="&#128712;" style={{border:"none",borderBottom:"1px solid grey"}} 
+            value={this.state.email} onChange={this.onChangeEmail}></input><br></br><br></br>
+            <label>Your password</label>
+            <input type="text" placeholder="&#128712;" style={{border:"none",borderBottom:"1px solid grey"}}
+            value={this.state.password} onChange={this.onChangePassword}></input><br></br><br></br><br></br>
+            <button className="btn btn-dark">Continue</button><br></br><br></br><br></br>
+      </form>
+    </div>
+  )
+}
+
+}
 
 
 export default App;
