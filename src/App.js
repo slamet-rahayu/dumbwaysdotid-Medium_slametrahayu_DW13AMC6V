@@ -44,10 +44,12 @@ function MyVerticallyCenteredModal(props) {
             <button className="btn btn-dark">Registration</button><br></br><br></br><br></br>
 
             <p><b>Already have account?
+     <div style={{marginLeft:"62%",marginTop:"-3.3%"}}>
     <Router>
-      <Link to="/"> Sign in</Link>
-      <Route exact path="/" component={Login} />
-    </Router> 
+      {/* <Link to="/"> Sign in</Link> */}
+      <Route component={Login} />
+    </Router>
+      </div> 
               </b></p>
           </form>
         </center>

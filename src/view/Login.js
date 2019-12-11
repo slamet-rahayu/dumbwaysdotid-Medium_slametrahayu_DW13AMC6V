@@ -51,9 +51,9 @@ function App() {
 
   return (
     <ButtonToolbar>
-      <Button className="btn btn-sm btn-success" onClick={() => setModalShow(true)} style={{marginLeft:"80%"}}>
-        Login
-      </Button>
+      <a href="!#" onClick={() => setModalShow(true)} style={{color:"green"}}>
+        Sign in
+      </a>
 
       <MyVerticallyCenteredModal
         show={modalShow}
