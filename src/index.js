@@ -6,10 +6,11 @@ import './index.css';
 // import Login from './view/Login';
 // import Home from './view/Home';
 // import Category from './view/Category';
-import Categorypage from './view/Category-page';
+// import Categorypage from './view/Category-page';
+import Article from './view/Article';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Categorypage />, document.getElementById('Home'));
+ReactDOM.render(<Article />, document.getElementById('Home'));
 // ReactDOM.render(<Login />, document.getElementById('root'));
 // ReactDOM.render(<App />, document.getElementById('login'));
 
