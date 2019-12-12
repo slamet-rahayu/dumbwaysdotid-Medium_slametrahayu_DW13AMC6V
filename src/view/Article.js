@@ -162,17 +162,21 @@ MISSION ORIGINALS | SUBSCRIBE
         <img src={User} alt="user" style={{borderRadius:"100%",float:"left",display:"inline"}}></img>
         <div style={{marginLeft:"15%",marginRight:"20%"}}>
         WRITTEN BY
-        <Button type="button" variant="outline-success btn-sm" style={{marginLeft:"100%"}}>follow</Button>
-        <p style={{fontSize:"25px",fontWeight:"bold"}}>Riyan Holiday</p>
-        <p>Bestselling author of ‘Conspiracy,’ ‘Ego is the Enemy’ & ‘The Obstacle Is The Way’ http://amzn.to/24qKRWR</p>
+        <Button type="button" variant="outline-success btn-sm" style={{marginLeft:"120%",}}>follow</Button>
+        <profile >
+        <p style={{fontSize:"25px",fontWeight:"bold",marginTop:"-35px"}}>Riyan Holiday</p>
+        <p style={{marginTop:"-20px"}}>Bestselling author of ‘Conspiracy,’ ‘Ego is the Enemy’ & ‘The Obstacle Is The Way’ http://amzn.to/24qKRWR</p>
+        </profile>
         </div>
+        <br></br><br></br>
         <img src={User} alt="user" style={{borderRadius:"100%",float:"left",display:"inline"}}></img>
         <div style={{marginLeft:"15%",marginRight:"20%"}}>
         
-        <Button type="button" variant="outline-success btn-sm" style={{marginLeft:"100%"}}>follow</Button>
-        <p style={{fontSize:"25px",fontWeight:"bold"}}>Mission.org</p>
-        <p>Bestselling author of ‘Conspiracy,’ ‘Ego is the Enemy’ & ‘The Obstacle Is The Way’ http://amzn.to/24qKRWR</p>
+        <Button type="button" variant="outline-success btn-sm" style={{marginLeft:"120%"}}>follow</Button>
+        <p style={{fontSize:"25px",fontWeight:"bold",marginTop:"-35px"}}>Riyan Holiday</p>
+        <p style={{marginTop:"-20px"}}>Bestselling author of ‘Conspiracy,’ ‘Ego is the Enemy’ & ‘The Obstacle Is The Way’ http://amzn.to/24qKRWR</p>
         </div>
+        <br></br><br></br>
         <hr></hr>
         </div> 
         <Button variant="outline-success btn-lg" style={{width:"100%"}}>See Responses (216)</Button>       
@@ -195,8 +199,8 @@ MISSION ORIGINALS | SUBSCRIBE
         <img src={Andy} alt="andy" style={{borderRadius:"100%"}}></img>
         </Col>
         <Col style={{marginLeft:"-30%"}}>
-        <p style={{fontSize:"12px"}}>Andy Raskin in Mission.org</p>
-        <p style={{fontSize:"13px"}}>Sep 15, 2016 · 8 min read</p>
+        <p style={{fontSize:"12px",marginTop:"0",marginBottom:"0"}}>Andy Raskin in Mission.org</p>
+        <p style={{fontSize:"13px",marginTop:"0",marginBottom:"0"}}>Sep 15, 2016 · 8 min read</p>
         </Col>
         <Col style={{float:"right"}}>
         <img src={Claps} width="30px" height="40px" style={{borderRadius:"100%"}}></img> 88K | 
@@ -213,8 +217,8 @@ MISSION ORIGINALS | SUBSCRIBE
         <img src={Andy} alt="andy" style={{borderRadius:"100%"}}></img>
         </Col>
         <Col style={{marginLeft:"-30%"}}>
-        <p style={{fontSize:"12px"}}>Andy Raskin in Mission.org</p>
-        <p style={{fontSize:"13px"}}>Sep 15, 2016 · 8 min read</p>
+        <p style={{fontSize:"12px",marginTop:"0",marginBottom:"0"}}>Andy Raskin in Mission.org</p>
+        <p style={{fontSize:"13px",marginTop:"0",marginBottom:"0"}}>Sep 15, 2016 · 8 min read</p>
         </Col>
         <Col style={{float:"right"}}>
         <img src={Claps} width="30px" height="40px" style={{borderRadius:"100%"}}></img> 88K | 
@@ -231,8 +235,8 @@ MISSION ORIGINALS | SUBSCRIBE
         <img src={Andy} alt="andy" style={{borderRadius:"100%"}}></img>
         </Col>
         <Col style={{marginLeft:"-30%"}}>
-        <p style={{fontSize:"12px"}}>Andy Raskin in Mission.org</p>
-        <p style={{fontSize:"13px"}}>Sep 15, 2016 · 8 min read</p>
+        <p style={{fontSize:"12px",marginTop:"0",marginBottom:"0"}}>Andy Raskin in Mission.org</p>
+        <p style={{fontSize:"13px",marginTop:"0",marginBottom:"0"}}>Sep 15, 2016 · 8 min read</p>
         </Col>
         <Col style={{float:"right"}}>
         <img src={Claps} width="30px" height="40px" style={{borderRadius:"100%"}}></img> 88K | 
@@ -244,6 +248,29 @@ MISSION ORIGINALS | SUBSCRIBE
 </div>
 </div>
 <div className="footer-bottom">
+<div className="footer-content-bottom">
+    <Row>
+        <Col>
+        <p style={{fontSize:"21.6px",fontWeight:"bold"}}>Discover Medium</p>
+        <p>Welcome to a place where words matter. On Medium, smart voices and original ideas take center stage - with no ads in sight. Watch</p>
+        </Col>
+        <Col>
+        <p style={{fontSize:"21.6px",fontWeight:"bold"}}>Discover Medium</p>
+        <p>Welcome to a place where words matter. On Medium, smart voices and original ideas take center stage - with no ads in sight. Watch</p>
+        </Col>
+        <Col>
+        <p style={{fontSize:"21.6px",fontWeight:"bold"}}>Discover Medium</p>
+        <p>Welcome to a place where words matter. On Medium, smart voices and original ideas take center stage - with no ads in sight. Watch</p>
+        </Col>
+    </Row>
+<hr color="white"></hr>
+<br></br>
+<div style={{width:"100%"}}>
+<p style={{fontWeight:"bold",fontSize:"30px"}}>Medium</p>
+<text style={{textAlign:"right",marginLeft:"83%",marginTop:"-4%",position:"absolute"}}>About Help Legal</text>
+</div>
+
+</div>
 
 </div>
 </div>
