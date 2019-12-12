@@ -7,10 +7,11 @@ import './index.css';
 // import Home from './view/Home';
 // import Category from './view/Category';
 // import Categorypage from './view/Category-page';
-import Article from './view/Article';
+// import Article from './view/Article';
+import Follow from './view/follow';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Article />, document.getElementById('Home'));
+ReactDOM.render(<Follow />, document.getElementById('Home'));
 // ReactDOM.render(<Login />, document.getElementById('root'));
 // ReactDOM.render(<App />, document.getElementById('login'));
 
