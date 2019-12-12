@@ -8,10 +8,11 @@ import './index.css';
 // import Category from './view/Category';
 // import Categorypage from './view/Category-page';
 // import Article from './view/Article';
-import Follow from './view/follow';
+// import Follow from './view/follow';
+import Komen from './view/Comment';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Follow />, document.getElementById('Home'));
+ReactDOM.render(<Komen />, document.getElementById('Home'));
 // ReactDOM.render(<Login />, document.getElementById('root'));
 // ReactDOM.render(<App />, document.getElementById('login'));
 
