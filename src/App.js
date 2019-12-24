@@ -5,6 +5,9 @@ import './App.css';
 import { Button } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
 import { ButtonToolbar } from 'react-bootstrap';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import Login from './view/Login';
+import ReactDOM from 'react-dom';
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -40,7 +43,14 @@ function MyVerticallyCenteredModal(props) {
             <input type="email" placeholder="&#128712;" style={{border:"none",borderBottom:"2px solid grey"}}></input><br></br><br></br>
             <button className="btn btn-dark">Registration</button><br></br><br></br><br></br>
 
-            <p><b>Already have account? <a href="!#">Sign in</a></b></p>
+            <p><b>Already have account?
+     <div style={{marginLeft:"62%",marginTop:"-3.3%"}}>
+    <Router>
+      {/* <Link to="/"> Sign in</Link> */}
+      <Route component={Login} />
+    </Router>
+      </div> 
+              </b></p>
           </form>
         </center>
         <p style={{fontSize:"15px",textAlign:"center",color:"grey"}}>
@@ -57,10 +67,9 @@ function MyVerticallyCenteredModal(props) {
 
 function App() {
   const [modalShow, setModalShow] = React.useState(false);
-
   return (
     <ButtonToolbar>
-      <Button className="btn btn-sm btn-success" onClick={() => setModalShow(true)} style={{marginLeft:"80%"}}>
+      <Button className="btn btn-sm btn-success" onClick={() => setModalShow(true)}>
         Get started
       </Button>
 

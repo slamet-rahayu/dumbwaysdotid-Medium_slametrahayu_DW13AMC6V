@@ -9,49 +9,34 @@ import '../App.css';
 import Card from 'react-bootstrap/Card';
 import Pixel from '../pixel.gif';
 import Ps from '../ps.PNG';
+import Profile from './Popover';
 
 function Home () {
 return (
 <Container>
 <Navbar expand="lg">
-  <Navbar.Brand href="#home" style={{fontWeight:"bold",fontSize:"30px"}}><img src={Medium} alt="medium" width="35px" height="35px"></img></Navbar.Brand>
+  <Navbar.Brand href="/home"><img src={Medium} alt="medium" width="45px" height="45px" style={{marginLeft:"-100%"}}></img></Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
 
     </Nav>
-      <span style={{fontSize:"20px",marginRight:"10px"}}>&#128269;</span>  
-      <span style={{fontSize:"25px",marginRight:"10px"}}>&#128365;</span>  
+    <h4 style={{marginTop:"5px",marginRight:"20px"}}><i class="fa fa-search"></i></h4>
+    <h4 style={{marginTop:"5px",marginRight:"20px"}}><i class="fa fa-bell"></i></h4>
       <Button variant="outline-dark btn-sm">Upgrade</Button>
       &nbsp;&nbsp;&nbsp;
-      <div className="profile"><p style={{marginTop:"-10px"}}></p>R</div>
+     <Profile />
   </Navbar.Collapse>
 </Navbar>
 
-<table cellPadding="12">
-    <tr>
-        <td><span>&lt;</span></td>
-        <td>HOME</td>
-        <td>ONEZERO</td>
-        <td>ELEMENTAL</td>
-        <td>GEN</td>
-        <td>ZORA</td>
-        <td>FORGE</td>
-        <td>HUMAN PARTS</td>
-        <td>MARKER</td>
-        <td>LEVEL</td>
-        <td>HEATED</td>
-        <td>MODUS</td>
-        <td>MORE</td>
-        <td><span>&gt;</span></td>
-    </tr>
-</table>
-
 <Row>
-    <Col lg={3}>
+    <Col lg={3} style={{marginLeft:"-2%"}}>
     <p style={{fontSize:"60px"}}>One Zero</p>
     </Col>
-    <Col><p style={{marginTop:"4%",marginRight:"50%",marginLeft:"-3%",fontWeight:"bold"}}>The front lines of the future A Medium publication about tech and science</p></Col>
+    <Col>
+    <p style={{marginTop:"4%",marginRight:"50%",marginLeft:"-3%",fontWeight:"bold"}}><color style={{color:"purple"}}>The front lines of the future.</color> A Medium publication about tech and science</p>
+    <Button type="button" variant="outline-success btn-sm" style={{float:"right",marginTop:"-5%"}}>follow</Button>
+    </Col>
 </Row>
 <br></br>
 <Row>

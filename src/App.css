@@ -53,10 +53,10 @@
   text-align: right; 
 }
 
-a,a:hover {
+/* a,a:hover {
   color:green;
   text-decoration: none;
-}
+} */
 
 input {
   width: 35%;
@@ -80,7 +80,6 @@ margin: 0px;
 box-sizing: border-box;
 margin-top: 2%;
 margin-bottom: 4%;
-<<<<<<< HEAD
 }
 
 .profile {
@@ -88,8 +87,25 @@ background: green;
 width: 35px;
 height: 35px;
 text-align: center;
+line-height: -5px;
 color: white;
 border-radius: 100%;
+}
+
+.profileLg {
+  background: green;
+  width: 128px;
+  height: 128px;
+  text-align: center;
+  color: white;
+  border-radius: 100%;
+  float: right;
+  margin-top: 1%;
+  
+  }
+
+.profile:first-child{
+  margin-top: -1%;
 }
 
 td:hover {
@@ -107,6 +123,128 @@ margin-right: -1%
   margin: 0% 20%;
   padding-top:20px ;
   padding-bottom: 2px;
-=======
->>>>>>> 433b4e33bdc0c78c5855969d840aa3c008bb69d5
+}
+
+.header {
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: -1%;
+}
+
+.header-box {
+  -webkit-box-shadow: 0 0px 15px -8px black;
+     -moz-box-shadow: 0 0px 15px -8px black;
+	        box-shadow: 0 0px 15px -8px black;
+}
+
+.content {
+  margin-top: 4%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.article {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.btn-follow {
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+
+}
+
+.tombol {
+  background: #ebebeb;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+}
+
+.claps {
+  margin-top: 3%;
+}
+
+.social {
+  float: right;
+  margin-top: -7%;
+}
+
+.author {
+  margin-top: 5%;
+}
+
+.footer-top {
+  margin-top: 5%;
+  background: #f0f0f0;
+  width: 100%;
+  padding-bottom: 1%;
+}
+
+.footer-bottom {
+  background: black;
+  margin-top: 0%;
+  width: 100%;
+}
+
+.footer-content {
+  margin-left: 4%;
+  margin-right: 4%;
+  padding-bottom: 1%;
+  padding-top: 3%;
+}
+
+.footer-content-bottom {
+  margin-left: 4%;
+  margin-right: 4%;
+  padding-bottom: 1%;
+  padding-top: 3%;
+  color: white;
+}
+
+.responses {
+  margin-top:2% ;
+  box-shadow: 0px 0px 2px 0px #0000003b;
+  border-radius: 2px;
+  padding: 15px 25px 5px 25px;
+}
+
+.comment-section {
+  margin-left: 22%;
+  margin-right: 22%;
+  box-sizing: border-box;
+  margin-bottom: 1%;
+  margin-top: -1%;
+}
+
+.comment-text {
+  width: 100%;
+  height: 240px;
+  background: #fafafa;
+  border: none;
+  box-shadow: 0px 0px 2px 0px grey;
+  margin-top: 1%;
+  resize: none;
+}
+
+span {
+  display: block;
+}
+
+.story {
+  width: 100%;
+  height: 700%;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.story::placeholder {
+  text-align: left;
 }
