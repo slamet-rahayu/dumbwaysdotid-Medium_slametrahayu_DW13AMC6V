@@ -1,0 +1,3 @@
+//get article
+const GET_ARTICLE = 'GET_ARTICLE'
+const GET_ARTICLE_PENDING = 'GET_ARTICLE_PENDING'
