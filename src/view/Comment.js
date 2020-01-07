@@ -8,6 +8,8 @@ import 'font-awesome/css/font-awesome.min.css';
 import Mission from '../mission.png';
 import 'font-awesome/css/font-awesome.css';
 import Profile from './Popover';
+import axios from 'axios'
+
 
 
 
@@ -60,9 +62,7 @@ return (
 <br></br>
 <p><b>Responses</b></p>
         <div className="commet-box">
-        <textarea className="comment-text">
-        </textarea>
-        <Button variant="success" size="sm"> Submit </Button>
+        <Comment />
         </div>
         <div style={{marginTop:"4%",background:"white"}}>
 
@@ -109,5 +109,42 @@ return (
 );
 }
 
+class Comment extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            article_id: '1',
+            user_id: '1',
+            comment: ''
+        }
+        this.formHandler = this.formHandler.bind(this)
+        this.formSubmit = this.formSubmit.bind(this)
+    }
+
+    formHandler(e) {
+        this.setState({[e.target.name]: e.target.value})
+    }
+
+    formSubmit(e) {
+        axios.post('https://medium-express.herokuapp.com/api/v1/comment/store', {
+            article_id: this.state.article_id,
+            user_id: this.state.user_id,
+            comment: this.state.comment
+        })
+    }
+    
+    render() {
+        return(
+            <form onSubmit={this.formSubmit}>
+            <textarea className="comment-text"
+            name="comment"
+            onChange={this.formHandler}
+            value={this.state.comment} >
+            </textarea>
+            <Button variant="success" size="sm" type="submit"> Submit </Button>
+            </form>
+        )
+    }
+}
 
 export default Home;

@@ -4,8 +4,9 @@ import { Modal } from 'react-bootstrap';
 import { ButtonToolbar } from 'react-bootstrap';
 import '../App.css';
 import '../App';
-import {Route, BrowserRouter} from 'react-router-dom';
+import {Route, BrowserRouter, Redirect} from 'react-router-dom';
 import Apps from '../App';
+import axios from 'axios'
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -63,66 +64,59 @@ class Form extends Component {
   userData;
   constructor(props) {
     super(props);
-
-    this.onChangeEmail = this.onChangeEmail.bind(this);
-    this.onChangePassword = this.onChangePassword.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      isLoggedIn: false
     }
+    this.formHandler = this.formHandler.bind(this)
+    this.submitHandler = this.submitHandler.bind(this)
   }
-
-  
-onChangeEmail(e) {
-  this.setState({ email: e.target.value })
-}
-
-onChangePassword(e) {
-  this.setState({ password: e.target.vlaue })
-}
-
-onSubmit(e) {
-  e.preventDefault()
-
-  this.setState({
-    email:'',
-    password:''
-
-  })
-}
-
-componentDidMount() {
-  this.userData = JSON.parse(localStorage.getItem('user'));
-
-  if(localStorage.getItem('user')) {
-    this.setState({
-      email: this.userData.email,
-      password: this.userData.password
+  formHandler(e) {
+    this.setState({[e.target.name]: e.target.value})
+  }
+  submitHandler(e){
+    
+    axios.post('https://medium-express.herokuapp.com/api/v1/login', {
+      email: this.state.email,
+      password: this.state.password
+    }).then(res=> {
+      const fullname = res.data.user.fullname
+      const username = res.data.user.username
+      const email = res.data.user.email
+      localStorage.setItem('token', res.data.token)
+      localStorage.setItem('user', JSON.stringify({
+        fullname,
+        username,
+        email
+      }))
+      console.log(res.data.user)
     })
-  } else {
-    this.setState({
-      email:'',
-      password: ''
+    .catch(error=>{
+      console.log(error)
     })
   }
-}
-
-componentWillUpdate(nextProps, nextState) {
-  localStorage.setItem('user',JSON.stringify(nextState));
-}
-
 render () {
+  if(this.state.isLoggedIn === true){
+    return <Redirect to='/Profile' />
+  }
   return (
     <div>
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.submitHandler}>
             <label>Your email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="email" placeholder="&#128712;" style={{border:"none",borderBottom:"1px solid grey"}} 
-            value={this.state.email} onChange={this.onChangeEmail}></input><br></br><br></br>
+            <input type="email"
+            name="email"
+             placeholder="&#128712;"
+              style={{border:"none",borderBottom:"1px solid grey"}} 
+            value={this.state.email}
+             onChange={this.formHandler}></input><br></br><br></br>
             <label>Your password</label>
-            <input type="text" placeholder="&#128712;" style={{border:"none",borderBottom:"1px solid grey"}}
-            value={this.state.password} onChange={this.onChangePassword}></input><br></br><br></br><br></br>
+            <input type="password"
+            name="password"
+             placeholder="&#128712;"
+              style={{border:"none",borderBottom:"1px solid grey"}}
+            value={this.state.password}
+             onChange={this.formHandler}></input><br></br><br></br><br></br>
             <button className="btn btn-dark">Continue</button><br></br><br></br><br></br>
       </form>
     </div>

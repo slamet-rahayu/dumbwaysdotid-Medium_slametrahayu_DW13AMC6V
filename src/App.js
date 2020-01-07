@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import left from './left.png';
 import right from './right.png';
 import './App.css';
@@ -8,6 +8,8 @@ import { ButtonToolbar } from 'react-bootstrap';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import Login from './view/Login';
 import ReactDOM from 'react-dom';
+import axios from 'axios'
+import Registerform from './view/FormRegister'
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -34,24 +36,7 @@ function MyVerticallyCenteredModal(props) {
           personalize your homepage, and follow authors and topics that you love
         </p>
         <center>
-          <form>
-            <label>Your username</label>
-            <input type="text" placeholder="&#128712;" style={{border:"none",borderBottom:"2px solid grey"}}></input><br></br><br></br>
-            <label>Your password</label>
-            <input type="password" placeholder="&#128712;" style={{border:"none",borderBottom:"2px solid grey"}}></input><br></br><br></br>
-            <label>Your email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="email" placeholder="&#128712;" style={{border:"none",borderBottom:"2px solid grey"}}></input><br></br><br></br>
-            <button className="btn btn-dark">Registration</button><br></br><br></br><br></br>
-
-            <p><b>Already have account?
-     <div style={{marginLeft:"62%",marginTop:"-3.3%"}}>
-    <Router>
-      {/* <Link to="/"> Sign in</Link> */}
-      <Route component={Login} />
-    </Router>
-      </div> 
-              </b></p>
-          </form>
+        <Registerform />
         </center>
         <p style={{fontSize:"15px",textAlign:"center",color:"grey"}}>
           To make Medium work, we log user data and share it with service providers. 
@@ -80,7 +65,5 @@ function App() {
     </ButtonToolbar>
   );
 }
-
-
 
 export default App;
